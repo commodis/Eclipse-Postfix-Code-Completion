@@ -94,7 +94,7 @@ public class CompilationUnitChangeNode extends TextEditChangeNode {
 			return new ChildNode[0]; // no edit preview & edit disabling possible in the MultiStateTextFileChange (edits must be applied in sequence)
 		}
 
-		ICompilationUnit cunit= (ICompilationUnit) change.getAdapter(ICompilationUnit.class);
+		ICompilationUnit cunit= change.getAdapter(ICompilationUnit.class);
 		if (cunit != null) {
 			List<ChildNode> children= new ArrayList<ChildNode>(5);
 			Map<IJavaElement, JavaLanguageNode> map= new HashMap<IJavaElement, JavaLanguageNode>(20);

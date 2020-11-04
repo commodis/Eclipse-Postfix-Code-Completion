@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <project name="maven-antrun-" default="main"  >
 <target name="main">
-  <replace token="bundle_qualifier," dir="C:\Users\Vaio\git\org.eclipse.jdt.postfixcompletion.git\luna\org.eclipse.jdt.core\target/classes" value="${buildQualifier},">
+  <replace dir="C:\Commodis\Eclipse-Postfix-Code-Completion\luna\org.eclipse.jdt.core\target/classes" value="${buildQualifier}," token="bundle_qualifier,">
     <include name="org/eclipse/jdt/internal/compiler/batch/messages.properties"/>
   </replace>
-  <replace token="bundle_version" dir="C:\Users\Vaio\git\org.eclipse.jdt.postfixcompletion.git\luna\org.eclipse.jdt.core\target/classes" value="${unqualifiedVersion}">
+  <replace dir="C:\Commodis\Eclipse-Postfix-Code-Completion\luna\org.eclipse.jdt.core\target/classes" value="${unqualifiedVersion}" token="bundle_version">
     <include name="org/eclipse/jdt/internal/compiler/batch/messages.properties"/>
   </replace>
 </target>

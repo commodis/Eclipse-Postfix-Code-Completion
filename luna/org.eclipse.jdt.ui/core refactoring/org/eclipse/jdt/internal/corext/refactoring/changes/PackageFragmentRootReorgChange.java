@@ -151,7 +151,7 @@ abstract class PackageFragmentRootReorgChange extends ResourceChange {
 	}
 
 	private void markAsExecuted(IPackageFragmentRoot root, ResourceMapping mapping) {
-		ReorgExecutionLog log= (ReorgExecutionLog)getAdapter(ReorgExecutionLog.class);
+		ReorgExecutionLog log= getAdapter(ReorgExecutionLog.class);
 		if (log != null) {
 			log.markAsProcessed(root);
 			log.markAsProcessed(mapping);

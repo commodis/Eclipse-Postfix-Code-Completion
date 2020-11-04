@@ -6,12 +6,27 @@
 	<version>0.0.3-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>Postfix code completion for Eclipse</name>
+
 	<properties>
-		<tycho-version>0.20.0</tycho-version>
-		<tycho.version>0.20.0</tycho.version>
-		<tycho-extras.version>0.20.0</tycho-extras.version>
+		<!-- latest version from https://mvnrepository.com/artifact/org.eclipse.tycho/tycho-maven-plugin is 2.1.0 -->
+		<!-- <tycho.version>0.20.0</tycho.version> -->
+		<tycho-version>2.1.0</tycho-version>
+		<tycho.version>2.1.0</tycho.version>
+		<tycho-extras.version>2.1.0</tycho-extras.version>
 	</properties>
 	<repositories>
+		<!-- the latest release is https://download.eclipse.org/releases/latest/ -->
+		<repository>
+			<id>2020-09</id>
+			<layout>p2</layout>
+			<url>https://download.eclipse.org/releases/2020-09/</url>
+		</repository>
+		<!-- the latest update site is https://download.eclipse.org/eclipse/updates/4.17/ which is for eclipse 2020-09 -->
+		<repository>
+			<id>2020-09 updates</id>
+			<layout>p2</layout>
+			<url>https://download.eclipse.org/eclipse/updates/4.17/</url>
+		</repository>
 		<!-- add Juno repository to resolve dependencies -->
 		<repository>
 			<id>Luna</id>

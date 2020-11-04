@@ -36,7 +36,7 @@ public class RenameMethodUserInterfaceStarter extends RenameUserInterfaceStarter
 	 */
 	@Override
 	public boolean activate(Refactoring refactoring, Shell parent, int saveMode) throws CoreException {
-		RenameVirtualMethodProcessor processor= (RenameVirtualMethodProcessor)refactoring.getAdapter(RenameVirtualMethodProcessor.class);
+		RenameVirtualMethodProcessor processor= refactoring.getAdapter(RenameVirtualMethodProcessor.class);
 		if (processor != null) {
 			RefactoringStatus status= processor.checkInitialConditions(new NullProgressMonitor());
 			if (!status.hasFatalError()) {

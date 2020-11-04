@@ -173,7 +173,7 @@ public final class CreateCopyOfCompilationUnitChange extends CreateTextFileChang
 	}
 
 	private void markAsExecuted(ICompilationUnit unit, ResourceMapping mapping) {
-		ReorgExecutionLog log= (ReorgExecutionLog) getAdapter(ReorgExecutionLog.class);
+		ReorgExecutionLog log= getAdapter(ReorgExecutionLog.class);
 		if (log != null) {
 			log.markAsProcessed(unit);
 			log.markAsProcessed(mapping);

@@ -3413,7 +3413,7 @@ public final class ReorgPolicyFactory {
 
 		public RefactoringStatus checkFinalConditions(IProgressMonitor pm, CheckConditionsContext context, IReorgQueries reorgQueries) throws CoreException {
 			Assert.isNotNull(reorgQueries);
-			ResourceChangeChecker checker= (ResourceChangeChecker) context.getChecker(ResourceChangeChecker.class);
+			ResourceChangeChecker checker= context.getChecker(ResourceChangeChecker.class);
 			IFile[] allModifiedFiles= getAllModifiedFiles();
 			RefactoringModifications modifications= getModifications();
 			IResourceChangeDescriptionFactory deltaFactory= checker.getDeltaFactory();
@@ -3422,7 +3422,7 @@ public final class ReorgPolicyFactory {
 			}
 			if (modifications != null) {
 				modifications.buildDelta(deltaFactory);
-				modifications.buildValidateEdits((ValidateEditChecker) context.getChecker(ValidateEditChecker.class));
+				modifications.buildValidateEdits(context.getChecker(ValidateEditChecker.class));
 			}
 			return new RefactoringStatus();
 		}

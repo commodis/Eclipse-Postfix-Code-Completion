@@ -125,7 +125,7 @@ public class NLSAccessorFieldRenameParticipant extends RenameParticipant {
 				String changeDescription= Messages.format(NLSMessages.NLSAccessorFieldRenameParticipant_changeDescription, new Object[] { fField.getElementName(), fNewName });
 				fChange.addTextEditChangeGroup(new TextEditChangeGroup(fChange, new TextEditGroup(changeDescription, edit)));
 
-				ResourceChangeChecker checker= (ResourceChangeChecker) context.getChecker(ResourceChangeChecker.class);
+				ResourceChangeChecker checker= context.getChecker(ResourceChangeChecker.class);
 				IResourceChangeDescriptionFactory deltaFactory= checker.getDeltaFactory();
 				deltaFactory.change((IFile) resourceBundle);
 			} finally {

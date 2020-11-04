@@ -528,7 +528,7 @@ public class JavaMergeViewer extends TextMergeViewer {
 		super.createControls(composite);
 		IWorkbenchPart workbenchPart = getCompareConfiguration().getContainer().getWorkbenchPart();
 		if (workbenchPart != null) {
-			IContextService service = (IContextService)workbenchPart.getSite().getService(IContextService.class);
+			IContextService service = workbenchPart.getSite().getService(IContextService.class);
 			if (service != null) {
 				service.activateContext("org.eclipse.jdt.ui.javaEditorScope"); //$NON-NLS-1$
 			}
@@ -538,7 +538,7 @@ public class JavaMergeViewer extends TextMergeViewer {
 	@Override
 	public Object getAdapter(Class adapter) {
 		if (adapter == ITextEditorExtension3.class) {
-			IEditorInput activeInput= (IEditorInput)super.getAdapter(IEditorInput.class);
+			IEditorInput activeInput= super.getAdapter(IEditorInput.class);
 			if (activeInput != null) {
 				for (Iterator<CompilationUnitEditorAdapter> iterator= fEditor.values().iterator(); iterator.hasNext();) {
 					CompilationUnitEditorAdapter editor= iterator.next();

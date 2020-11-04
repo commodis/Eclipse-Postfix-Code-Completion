@@ -49,7 +49,7 @@ public class DeleteWizard extends RefactoringWizard {
 	public DeleteWizard(Refactoring refactoring) {
 		super(refactoring, DIALOG_BASED_USER_INTERFACE);
 		setDefaultPageTitle(RefactoringMessages.DeleteWizard_1);
-		fProcessor= (JavaDeleteProcessor) refactoring.getAdapter(JavaDeleteProcessor.class);
+		fProcessor= refactoring.getAdapter(JavaDeleteProcessor.class);
 		fProcessor.setQueries(new ReorgQueries(this));
 	}
 

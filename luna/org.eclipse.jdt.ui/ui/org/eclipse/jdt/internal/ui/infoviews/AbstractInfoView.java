@@ -341,7 +341,7 @@ public abstract class AbstractInfoView extends ViewPart implements ISelectionLis
 		if (action != null)
 			actionBars.setGlobalActionHandler(ActionFactory.SELECT_ALL.getId(), action);
 
-		IHandlerService handlerService= (IHandlerService) getSite().getService(IHandlerService.class);
+		IHandlerService handlerService= getSite().getService(IHandlerService.class);
 		handlerService.activateHandler(IWorkbenchCommandConstants.NAVIGATE_TOGGLE_LINK_WITH_EDITOR, new ActionHandler(fToggleLinkAction));
 	}
 
@@ -577,7 +577,7 @@ public abstract class AbstractInfoView extends ViewPart implements ISelectionLis
 
 		IJavaElement je= null;
 		if (element instanceof IAdaptable)
-			je= (IJavaElement)((IAdaptable)element).getAdapter(IJavaElement.class);
+			je= ((IAdaptable)element).getAdapter(IJavaElement.class);
 
 		if (je != null && je.exists())
 			return je;

@@ -149,7 +149,7 @@ public class CopyResourceChange extends ResourceChange {
 	}
 
 	private void markAsExecuted(IResource resource) {
-		ReorgExecutionLog log= (ReorgExecutionLog)getAdapter(ReorgExecutionLog.class);
+		ReorgExecutionLog log= getAdapter(ReorgExecutionLog.class);
 		if (log != null) {
 			log.markAsProcessed(resource);
 		}

@@ -506,7 +506,7 @@ public class RenameSupport {
 	}
 
 	private void restoreSelectionState(RenameSelectionState state) throws CoreException {
-		INameUpdating nameUpdating= (INameUpdating) fRefactoring.getAdapter(INameUpdating.class);
+		INameUpdating nameUpdating= fRefactoring.getAdapter(INameUpdating.class);
 		if (nameUpdating != null && state != null) {
 			Object newElement= nameUpdating.getNewElement();
 			if (newElement != null) {

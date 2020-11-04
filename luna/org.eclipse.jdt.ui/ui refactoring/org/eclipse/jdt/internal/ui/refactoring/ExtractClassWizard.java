@@ -523,7 +523,7 @@ public class ExtractClassWizard extends RefactoringWizard {
 	}
 
 	public ExtractClassDescriptorVerification getVerification() {
-		ExtractClassDescriptorVerification adapter= (ExtractClassDescriptorVerification) getRefactoring().getAdapter(ExtractClassDescriptorVerification.class);
+		ExtractClassDescriptorVerification adapter= getRefactoring().getAdapter(ExtractClassDescriptorVerification.class);
 		return adapter;
 	}
 

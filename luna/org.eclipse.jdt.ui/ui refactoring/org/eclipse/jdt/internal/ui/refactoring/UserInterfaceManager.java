@@ -38,7 +38,7 @@ public class UserInterfaceManager {
 
 
 	public UserInterfaceStarter getStarter(Refactoring refactoring) {
-		RefactoringProcessor processor= (RefactoringProcessor)refactoring.getAdapter(RefactoringProcessor.class);
+		RefactoringProcessor processor= refactoring.getAdapter(RefactoringProcessor.class);
 		if (processor == null)
 			return null;
 		Tuple tuple= fMap.get(processor.getClass());

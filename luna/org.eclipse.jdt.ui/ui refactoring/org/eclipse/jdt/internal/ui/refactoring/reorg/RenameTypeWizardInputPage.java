@@ -142,7 +142,7 @@ class RenameTypeWizardInputPage extends RenameInputWizardPage {
 	}
 
 	private ISimilarDeclarationUpdating getSimilarElementUpdating() {
-		return (ISimilarDeclarationUpdating) getRefactoring().getAdapter(ISimilarDeclarationUpdating.class);
+		return getRefactoring().getAdapter(ISimilarDeclarationUpdating.class);
 	}
 
 	@Override

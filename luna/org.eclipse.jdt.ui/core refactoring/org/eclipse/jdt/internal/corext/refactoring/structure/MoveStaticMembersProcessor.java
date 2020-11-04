@@ -400,7 +400,7 @@ public final class MoveStaticMembersProcessor extends MoveProcessor implements I
 			List<ICompilationUnit> modifiedCus= new ArrayList<ICompilationUnit>();
 			createChange(modifiedCus, result, new SubProgressMonitor(pm, 7));
 			IFile[] changedFiles= getAllFilesToModify(modifiedCus);
-			ResourceChangeChecker checker= (ResourceChangeChecker)context.getChecker(ResourceChangeChecker.class);
+			ResourceChangeChecker checker= context.getChecker(ResourceChangeChecker.class);
 			for (int i= 0; i < changedFiles.length; i++) {
 				checker.getDeltaFactory().change(changedFiles[i]);
 			}
